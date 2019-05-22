@@ -1,0 +1,11 @@
+C:\Users\phhen\source\repos\listaAnimes\listaAnimes\bin\Debug\listaAnimes.exe.config
+C:\Users\phhen\source\repos\listaAnimes\listaAnimes\bin\Debug\listaAnimes.exe
+C:\Users\phhen\source\repos\listaAnimes\listaAnimes\bin\Debug\listaAnimes.pdb
+C:\Users\phhen\source\repos\listaAnimes\listaAnimes\obj\Debug\listaAnimes.csprojAssemblyReference.cache
+C:\Users\phhen\source\repos\listaAnimes\listaAnimes\obj\Debug\listaAnimes.frmLogin.resources
+C:\Users\phhen\source\repos\listaAnimes\listaAnimes\obj\Debug\listaAnimes.Properties.Resources.resources
+C:\Users\phhen\source\repos\listaAnimes\listaAnimes\obj\Debug\listaAnimes.csproj.GenerateResource.cache
+C:\Users\phhen\source\repos\listaAnimes\listaAnimes\obj\Debug\listaAnimes.csproj.CoreCompileInputs.cache
+C:\Users\phhen\source\repos\listaAnimes\listaAnimes\obj\Debug\listaAnimes.exe
+C:\Users\phhen\source\repos\listaAnimes\listaAnimes\obj\Debug\listaAnimes.pdb
+C:\Users\phhen\source\repos\listaAnimes\listaAnimes\obj\Debug\listaAnimes.frmCadastro.resources
