@@ -20,26 +20,34 @@ namespace listaAnimes
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            //Abrir conexão com o banco de dados
             string endereco = "server=Paulo-Not\\SQLEXPRESS;database=Projeto_Animes;UID=sa;password=123456";
             SqlConnection conexao = new SqlConnection(endereco);
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
             comando.CommandType = CommandType.Text;
-            comando.CommandText = "select * from Usuario where username = @username and senha = @senha";
+            comando.CommandText = "select * from Usuarios where username = @username and senha = @senha";
             comando.Parameters.AddWithValue("@username", txtLogin.Text);
             comando.Parameters.AddWithValue("@senha", txtSenha.Text);
             conexao.Open();
             SqlDataReader consulta = comando.ExecuteReader(CommandBehavior.CloseConnection);
             if (consulta.Read() == true)
             {
+                //Se resultado for verdadeiro a conexão sera permitida
                 conexao.Close();
                 this.Close();
+                
             }
-            else
+            else if (consulta.Read() == false)
             {
+                //Tela de Erro de senha
                 MessageBox.Show("Usuário ou Senha Invalidos");
                 conexao.Close();
 
+            } else
+            {
+                MessageBox.Show("Erro no sistema");
+                conexao.Close();
             }
 
 

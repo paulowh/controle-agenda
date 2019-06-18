@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.grbOpcao = new System.Windows.Forms.GroupBox();
-            this.rbnAnime = new System.Windows.Forms.RadioButton();
-            this.rbnFilmes = new System.Windows.Forms.RadioButton();
-            this.rbnSeries = new System.Windows.Forms.RadioButton();
             this.rbnGeral = new System.Windows.Forms.RadioButton();
+            this.rbnSeries = new System.Windows.Forms.RadioButton();
+            this.rbnFilmes = new System.Windows.Forms.RadioButton();
+            this.rbnAnime = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridConteudo = new System.Windows.Forms.DataGridView();
@@ -55,39 +55,6 @@
             this.grbOpcao.TabStop = false;
             this.grbOpcao.Text = "Opções";
             // 
-            // rbnAnime
-            // 
-            this.rbnAnime.AutoSize = true;
-            this.rbnAnime.Location = new System.Drawing.Point(11, 32);
-            this.rbnAnime.Name = "rbnAnime";
-            this.rbnAnime.Size = new System.Drawing.Size(54, 17);
-            this.rbnAnime.TabIndex = 0;
-            this.rbnAnime.TabStop = true;
-            this.rbnAnime.Text = "Anime";
-            this.rbnAnime.UseVisualStyleBackColor = true;
-            // 
-            // rbnFilmes
-            // 
-            this.rbnFilmes.AutoSize = true;
-            this.rbnFilmes.Location = new System.Drawing.Point(11, 55);
-            this.rbnFilmes.Name = "rbnFilmes";
-            this.rbnFilmes.Size = new System.Drawing.Size(54, 17);
-            this.rbnFilmes.TabIndex = 1;
-            this.rbnFilmes.TabStop = true;
-            this.rbnFilmes.Text = "Filmes";
-            this.rbnFilmes.UseVisualStyleBackColor = true;
-            // 
-            // rbnSeries
-            // 
-            this.rbnSeries.AutoSize = true;
-            this.rbnSeries.Location = new System.Drawing.Point(11, 78);
-            this.rbnSeries.Name = "rbnSeries";
-            this.rbnSeries.Size = new System.Drawing.Size(54, 17);
-            this.rbnSeries.TabIndex = 2;
-            this.rbnSeries.TabStop = true;
-            this.rbnSeries.Text = "Séries";
-            this.rbnSeries.UseVisualStyleBackColor = true;
-            // 
             // rbnGeral
             // 
             this.rbnGeral.AutoSize = true;
@@ -100,10 +67,43 @@
             this.rbnGeral.UseVisualStyleBackColor = true;
             this.rbnGeral.CheckedChanged += new System.EventHandler(this.rbnGeral_CheckedChanged);
             // 
+            // rbnSeries
+            // 
+            this.rbnSeries.AutoSize = true;
+            this.rbnSeries.Location = new System.Drawing.Point(11, 78);
+            this.rbnSeries.Name = "rbnSeries";
+            this.rbnSeries.Size = new System.Drawing.Size(54, 17);
+            this.rbnSeries.TabIndex = 2;
+            this.rbnSeries.TabStop = true;
+            this.rbnSeries.Text = "Séries";
+            this.rbnSeries.UseVisualStyleBackColor = true;
+            // 
+            // rbnFilmes
+            // 
+            this.rbnFilmes.AutoSize = true;
+            this.rbnFilmes.Location = new System.Drawing.Point(11, 55);
+            this.rbnFilmes.Name = "rbnFilmes";
+            this.rbnFilmes.Size = new System.Drawing.Size(54, 17);
+            this.rbnFilmes.TabIndex = 1;
+            this.rbnFilmes.TabStop = true;
+            this.rbnFilmes.Text = "Filmes";
+            this.rbnFilmes.UseVisualStyleBackColor = true;
+            // 
+            // rbnAnime
+            // 
+            this.rbnAnime.AutoSize = true;
+            this.rbnAnime.Location = new System.Drawing.Point(11, 32);
+            this.rbnAnime.Name = "rbnAnime";
+            this.rbnAnime.Size = new System.Drawing.Size(54, 17);
+            this.rbnAnime.TabIndex = 0;
+            this.rbnAnime.TabStop = true;
+            this.rbnAnime.Text = "Anime";
+            this.rbnAnime.UseVisualStyleBackColor = true;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(172, 22);
+            this.label1.Location = new System.Drawing.Point(155, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 13);
             this.label1.TabIndex = 1;
@@ -111,7 +111,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(174, 38);
+            this.textBox1.Location = new System.Drawing.Point(157, 35);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(439, 20);
             this.textBox1.TabIndex = 2;
@@ -119,7 +119,7 @@
             // dataGridConteudo
             // 
             this.dataGridConteudo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridConteudo.Location = new System.Drawing.Point(174, 77);
+            this.dataGridConteudo.Location = new System.Drawing.Point(157, 74);
             this.dataGridConteudo.Name = "dataGridConteudo";
             this.dataGridConteudo.Size = new System.Drawing.Size(439, 264);
             this.dataGridConteudo.TabIndex = 3;
@@ -127,7 +127,7 @@
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(637, 38);
+            this.btnPesquisar.Location = new System.Drawing.Point(620, 35);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
             this.btnPesquisar.TabIndex = 4;
@@ -136,7 +136,7 @@
             // 
             // btnAdiconar
             // 
-            this.btnAdiconar.Location = new System.Drawing.Point(637, 318);
+            this.btnAdiconar.Location = new System.Drawing.Point(620, 315);
             this.btnAdiconar.Name = "btnAdiconar";
             this.btnAdiconar.Size = new System.Drawing.Size(75, 23);
             this.btnAdiconar.TabIndex = 5;
@@ -148,7 +148,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(741, 359);
+            this.ClientSize = new System.Drawing.Size(720, 366);
             this.Controls.Add(this.btnAdiconar);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.dataGridConteudo);
@@ -156,7 +156,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grbOpcao);
             this.Name = "frmPrincipal";
-            this.Text = "frmPrincipal";
+            this.Text = "Principal";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.grbOpcao.ResumeLayout(false);
             this.grbOpcao.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridConteudo)).EndInit();
