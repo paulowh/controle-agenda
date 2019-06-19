@@ -20,6 +20,7 @@ namespace listaAnimes
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            
             //Abrir conexão com o banco de dados
             string endereco = "server=Paulo-Not\\SQLEXPRESS;database=Projeto_Animes;UID=sa;password=123456";
             SqlConnection conexao = new SqlConnection(endereco);
@@ -49,9 +50,7 @@ namespace listaAnimes
                 MessageBox.Show("Erro no sistema");
                 conexao.Close();
             }
-
-
-
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

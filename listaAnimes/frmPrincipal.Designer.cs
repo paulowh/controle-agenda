@@ -118,6 +118,7 @@
             // 
             // dataGridConteudo
             // 
+            this.dataGridConteudo.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dataGridConteudo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridConteudo.Location = new System.Drawing.Point(157, 74);
             this.dataGridConteudo.Name = "dataGridConteudo";
@@ -155,7 +156,11 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grbOpcao);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.grbOpcao.ResumeLayout(false);

@@ -22,3 +22,9 @@ C:\Users\phhen\Git\Agenda-Animes\listaAnimes\obj\Debug\listaAnimes.csproj.Genera
 C:\Users\phhen\Git\Agenda-Animes\listaAnimes\obj\Debug\listaAnimes.csproj.CoreCompileInputs.cache
 C:\Users\phhen\Git\Agenda-Animes\listaAnimes\obj\Debug\listaAnimes.exe
 C:\Users\phhen\Git\Agenda-Animes\listaAnimes\obj\Debug\listaAnimes.pdb
+C:\Users\phhen\Git\Agenda-Animes\listaAnimes\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\phhen\Git\Agenda-Animes\listaAnimes\bin\Debug\Google.Protobuf.dll
+C:\Users\phhen\Git\Agenda-Animes\listaAnimes\bin\Debug\MySql.Data.dll
+C:\Users\phhen\Git\Agenda-Animes\listaAnimes\bin\Debug\Google.Protobuf.xml
+C:\Users\phhen\Git\Agenda-Animes\listaAnimes\bin\Debug\MySql.Data.xml
+C:\Users\phhen\Git\Agenda-Animes\listaAnimes\obj\Debug\listaAnimes.csproj.CopyComplete
