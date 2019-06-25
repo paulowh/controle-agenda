@@ -43,7 +43,7 @@ namespace listaAnimes
                 Opcao = "%%";
             }
             
-            String endereco = "server=AME0556336W10-1\\SQLEXPRESS;database=Projeto_Animes;UID=sa;password=123456";
+            String endereco = "server=remotemysql.com;port=3306;database=0erhhgCzuD;UID=0erhhgCzuD;password=UGVKvEHVqs";
             SqlDataAdapter da = new SqlDataAdapter("SELECT NOME, CLASSIFICACAO, ANO, GENERO, FROM CONTEUDO WHERE CLASSIFICACAO LIKE '%" + Opcao + "%'", endereco);
             DataSet ds = new DataSet();
             da.Fill(ds, "CONTEUDO");
