@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace listaAnimes
 {
@@ -20,30 +23,37 @@ namespace listaAnimes
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            string endereco = "server=Paulo-Not\\SQLEXPRESS;database=Projeto_Animes;UID=sa;password=123456";
-            SqlConnection conexao = new SqlConnection(endereco);
-            SqlCommand comando = new SqlCommand();
+
+            var endereco = "server=remotemysql.com;port=3306;database=0erhhgCzuD;UID=0erhhgCzuD;password=UGVKvEHVqs";
+            var conexao = new MySqlConnection(endereco);
+            var comando = conexao.CreateCommand();
+
             comando.Connection = conexao;
             comando.CommandType = CommandType.Text;
-            comando.CommandText = "select * from Usuario where username = @username and senha = @senha";
+            comando.CommandText = "select * from Usuarios where username = @username and senha = @senha";
             comando.Parameters.AddWithValue("@username", txtLogin.Text);
             comando.Parameters.AddWithValue("@senha", txtSenha.Text);
             conexao.Open();
-            SqlDataReader consulta = comando.ExecuteReader(CommandBehavior.CloseConnection);
+            MySqlDataReader consulta = comando.ExecuteReader(CommandBehavior.CloseConnection);
             if (consulta.Read() == true)
             {
+                //Se resultado for verdadeiro a conexão sera permitida
                 conexao.Close();
                 this.Close();
+                
             }
-            else
+            else if (consulta.Read() == false)
             {
+                //Tela de Erro de senha
                 MessageBox.Show("Usuário ou Senha Invalidos");
                 conexao.Close();
 
+            } else
+            {
+                MessageBox.Show("Erro no sistema");
+                conexao.Close();
             }
-
-
-
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

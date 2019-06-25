@@ -55,5 +55,16 @@ namespace listaAnimes
         {
 
         }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            //Minimiza o forme "Principal"
+            this.Hide();
+            //Abrir o forme de login
+            frmLogin fLogin = new frmLogin();
+            fLogin.ShowDialog();
+
+
+        }
     }
 }

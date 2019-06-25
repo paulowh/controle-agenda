@@ -32,11 +32,11 @@ namespace listaAnimes
             comando.Parameters.AddWithValue("@data_nasc", datNascimento.Value);
             if (rdbMasculino.Checked == true)
             {
-                comando.Parameters.AddWithValue("@sexo", "Masculino");
+                comando.Parameters.AddWithValue("@sexo", "M");
             }
             else if (rdbFeminino.Checked == true)
             {
-                comando.Parameters.AddWithValue("@sexo", "Feminino");
+                comando.Parameters.AddWithValue("@sexo", "F");
             }
             else
             {
@@ -55,6 +55,11 @@ namespace listaAnimes
                 MessageBox.Show("Ocorreu algum problema no cadastro.");
             }
             conexao.Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
