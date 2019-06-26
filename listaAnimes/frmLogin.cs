@@ -58,7 +58,7 @@ namespace listaAnimes
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void linkCadastrar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

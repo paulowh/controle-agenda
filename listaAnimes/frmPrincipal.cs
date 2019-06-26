@@ -6,8 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace listaAnimes
 {
@@ -42,9 +42,12 @@ namespace listaAnimes
             {
                 Opcao = "%%";
             }
-            
-            String endereco = "server=AME0556336W10-1\\SQLEXPRESS;database=Projeto_Animes;UID=sa;password=123456";
-            SqlDataAdapter da = new SqlDataAdapter("SELECT NOME, CLASSIFICACAO, ANO, GENERO, FROM CONTEUDO WHERE CLASSIFICACAO LIKE '%" + Opcao + "%'", endereco);
+
+            var endereco = "server=remotemysql.com;port=3306;database=0erhhgCzuD;UID=0erhhgCzuD;password=UGVKvEHVqs";
+            var conexao = new MySqlConnection(endereco);
+            var comando = conexao.CreateCommand();
+
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT NOME, CLASSIFICACAO, ANO, GENERO, FROM CONTEUDO WHERE CLASSIFICACAO LIKE '%" + Opcao + "%'", endereco);
             DataSet ds = new DataSet();
             da.Fill(ds, "CONTEUDO");
             dataGridConteudo.DataSource = ds.Tables["CONTEUDO"].DefaultView;
