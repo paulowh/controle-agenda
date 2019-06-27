@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,11 +22,13 @@ namespace listaAnimes
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            String endereco = "server=Paulo-Not\\SQLEXPRESS;database=Projeto_Animes;UID=sa;password=123456";
-            SqlConnection conexao = new SqlConnection(endereco);
-            SqlCommand comando = new SqlCommand();
+            var endereco = "server=remotemysql.com;port=3306;database=0erhhgCzuD;UID=0erhhgCzuD;password=UGVKvEHVqs";
+            var conexao = new MySqlConnection(endereco);
+            var comando = conexao.CreateCommand();
+
             comando.Connection = conexao;
-            comando.CommandText = "INSERT INTO USUARIOS(NOME, USERNAME, EMAIL, SENHA, DATA_NASC, SEXO) VALUES( @nome, @username, @email, @senha, @data_nasc, @Sexo)";
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "INSERT INTO Usuarios(NOME, USERNAME, EMAIL, SENHA, DATA_NASC, SEXO) VALUES( @nome, @username, @email, @senha, @data_nasc, @Sexo)";
             comando.Parameters.AddWithValue("@nome", txtNome.Text);
             comando.Parameters.AddWithValue("@username", txtUsername.Text);
             comando.Parameters.AddWithValue("@email", txtEmail.Text);
