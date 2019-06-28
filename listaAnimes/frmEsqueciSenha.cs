@@ -33,63 +33,75 @@ namespace listaAnimes
             var conexao = new MySqlConnection(endereco);
             var comando = conexao.CreateCommand();
 
+            
             comando.Connection = conexao;
             comando.CommandType = CommandType.Text;
-            comando.CommandText = "SELECT senha FROM Usuarios WHERE username LIKE @username";
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT senha FROM Usuarios WHERE username @usurname", endereco);
-            DataSet ds = new DataSet();
-            
-            //MySqlDataAdapter da = new MySqlDataAdapter("SELECT nome, genero, classificacao, quantidadeEp, categoria, status FROM ConteudoGeral WHERE categoria LIKE '%" + pesquisa + "%'", endereco);
-            comando.Parameters.AddWithValue("@username", txtUsernameES.Text);
+            comando.CommandText = "UPDATE Usuarios SET senha= '" + txtNovaSenha.Text +"' WHERE email= '" + txtemail.Text + "'";
+            //UPDATE `Usuarios` SET `nome`=[value - 1],`username`=[value - 2],`email`=[value - 3],`senha`=[value - 4],`data_nasc`=[value - 5],`sexo`=[value - 6] WHERE 1
+            //comando.Parameters.AddWithValue("@email", txtemail.Text);
+
             conexao.Open();
-            MySqlDataReader consulta = comando.ExecuteReader(CommandBehavior.CloseConnection);
+            int teste = comando.ExecuteNonQuery();
+            conexao.Close();
+            if (teste == 0) {
+                //Not updated.
+                MessageBox.Show("Ouve um erro. \npor favor tente novamente", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            }
+            else {
+                //Updated.
+                MessageBox.Show("Senha Salva com sucesso", "Alteração de Senha", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                var email = "ph.henriq31@gmail.com";
+                var nome = "Agenda Anime";
+                MailAddress remente = new MailAddress(email, nome);
+                MailAddress destino = new MailAddress(txtemail.Text, txtemail.Text);
+
+                //Conteudo do email           
+                MailMessage msg = new MailMessage(remente, destino);
+                //Assunto
+                msg.Subject = "Recuperação da Senha";
+
+                //Campo do Texto (Colocar a senha aqui)
+                msg.Body = "confirmação de alteração de senha\n\nSua senha foi alterada com sucesso para: " + txtNovaSenha.Text;
+
+
+                //Fazer conexão com o email para o envio
+                SmtpClient smtp = new SmtpClient();
+                smtp.Host = "smtp.gmail.com";
+                smtp.EnableSsl = true;
+                smtp.UseDefaultCredentials = false;
+                //credenciais, Senha 
+                smtp.Credentials = new NetworkCredential(remente.Address, "timelord");
+                //envio da mensagem
+                smtp.Send(msg);
+                this.Close();
+            }
+          
+
+            /*MySqlDataReader consulta = comando.ExecuteReader(CommandBehavior.CloseConnection);
             if (consulta.Read() == true)
             {
-                //Se resultado for verdadeiro a conexão sera permitida
+
                 conexao.Close();
 
-                MessageBox.Show("OK"+ da, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Senha Salva com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
             }
             else if (consulta.Read() == false)
             {
-                //Tela de Erro de senha
-                MessageBox.Show("Não foi encontrado nenhum Usuario correspondente", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                MessageBox.Show("Ouve um erro, por favor tente novamente", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 conexao.Close();
 
-            }
-            else
-            {
-                MessageBox.Show("Erro no sistema");
-                conexao.Close();
-            }
-            /*
-            var email = "ph.henriq31@gmail.com";
-            var nome = "Agenda Anime";
-            MailAddress remente = new MailAddress(email, nome);
-            MailAddress destino = new MailAddress(txtemail.Text, txtemail.Text);
+            }*/
 
-            //Conteudo do email           
-            MailMessage msg = new MailMessage(remente, destino);
-            //Assunto
-            msg.Subject = "Recuperação da Senha";
+            //senha nova = 123456
+            //update na tabela de usuários usando como where email e passando para a senha uma senha nova
+           
 
-
-
-            //Campo do Texto (Colocar a senha aqui)
-            msg.Body = "Aqui esta sua senha de acesso";
-
-            //Fazer conexão com o email para o envio
-            SmtpClient smtp = new SmtpClient();
-            smtp.Host = "smtp.gmail.com";
-            smtp.EnableSsl = true;
-            smtp.UseDefaultCredentials = false;
-            //credenciais, Senha 
-            smtp.Credentials = new NetworkCredential(remente.Address, "timelord");
-            //envio da mensagem
-            smtp.Send(msg);
-            */
         }
     }
 }

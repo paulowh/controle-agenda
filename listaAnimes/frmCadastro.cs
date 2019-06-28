@@ -53,10 +53,7 @@ namespace listaAnimes
             if (linhaAfetadas > 0)
             {
                 MessageBox.Show("Usuário cadastrado com sucesso!");
-                txtNome.Clear();
-                txtUsername.Clear();
-                txtEmail.Clear();
-                txtSenha.Clear();
+                this.Close();
                 
 
             }

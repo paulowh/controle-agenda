@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtUsernameES = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEsqueciSenha));
+            this.txtNovaSenha = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtemail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // txtUsernameES
+            // txtNovaSenha
             // 
-            this.txtUsernameES.Location = new System.Drawing.Point(125, 30);
-            this.txtUsernameES.Name = "txtUsernameES";
-            this.txtUsernameES.Size = new System.Drawing.Size(127, 20);
-            this.txtUsernameES.TabIndex = 0;
+            this.txtNovaSenha.Location = new System.Drawing.Point(125, 52);
+            this.txtNovaSenha.Name = "txtNovaSenha";
+            this.txtNovaSenha.Size = new System.Drawing.Size(127, 20);
+            this.txtNovaSenha.TabIndex = 0;
             // 
             // btnOK
             // 
@@ -55,15 +56,15 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 37);
+            this.label1.Location = new System.Drawing.Point(49, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Username:";
+            this.label1.Text = "Nova Senha:";
             // 
             // txtemail
             // 
-            this.txtemail.Location = new System.Drawing.Point(125, 56);
+            this.txtemail.Location = new System.Drawing.Point(125, 26);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(127, 20);
             this.txtemail.TabIndex = 5;
@@ -71,7 +72,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(81, 63);
+            this.label2.Location = new System.Drawing.Point(81, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 6;
@@ -86,10 +87,15 @@
             this.Controls.Add(this.txtemail);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.txtUsernameES);
+            this.Controls.Add(this.txtNovaSenha);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmEsqueciSenha";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-            this.Text = "Esqueci Senha";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Recuperar Senha";
             this.Load += new System.EventHandler(this.frmEsqueciSenha_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -98,7 +104,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtUsernameES;
+        private System.Windows.Forms.TextBox txtNovaSenha;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtemail;
