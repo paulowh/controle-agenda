@@ -31,7 +31,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdbFeminino = new System.Windows.Forms.RadioButton();
             this.rdbMasculino = new System.Windows.Forms.RadioButton();
-            this.datNascimento = new System.Windows.Forms.DateTimePicker();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.txtSenha = new System.Windows.Forms.TextBox();
@@ -43,6 +42,7 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.datNascimento = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,16 +78,6 @@
             this.rdbMasculino.TabStop = true;
             this.rdbMasculino.Text = "Masculino";
             this.rdbMasculino.UseVisualStyleBackColor = true;
-            // 
-            // datNascimento
-            // 
-            this.datNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datNascimento.Location = new System.Drawing.Point(121, 116);
-            this.datNascimento.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
-            this.datNascimento.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.datNascimento.Name = "datNascimento";
-            this.datNascimento.Size = new System.Drawing.Size(95, 20);
-            this.datNascimento.TabIndex = 4;
             // 
             // btnCancelar
             // 
@@ -182,6 +172,17 @@
             this.lblName.TabIndex = 15;
             this.lblName.Text = "Nome:";
             // 
+            // datNascimento
+            // 
+            this.datNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.datNascimento.Location = new System.Drawing.Point(121, 116);
+            this.datNascimento.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.datNascimento.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.datNascimento.Name = "datNascimento";
+            this.datNascimento.Size = new System.Drawing.Size(95, 20);
+            this.datNascimento.TabIndex = 4;
+            this.datNascimento.Value = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
+            // 
             // frmCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,7 +219,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rdbFeminino;
         private System.Windows.Forms.RadioButton rdbMasculino;
-        private System.Windows.Forms.DateTimePicker datNascimento;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.TextBox txtSenha;
@@ -230,5 +230,6 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.DateTimePicker datNascimento;
     }
 }

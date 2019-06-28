@@ -66,5 +66,11 @@ namespace listaAnimes
             frmCadastro fCadastro = new frmCadastro();
             fCadastro.ShowDialog();
         }
+
+        private void linkEsqSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmEsqueciSenha fEsqSenha = new frmEsqueciSenha();
+            fEsqSenha.ShowDialog();
+        }
     }
 }

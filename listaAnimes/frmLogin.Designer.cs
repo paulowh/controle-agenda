@@ -111,6 +111,7 @@
             this.linkEsqSenha.TabIndex = 5;
             this.linkEsqSenha.TabStop = true;
             this.linkEsqSenha.Text = "&Esqueci a Senha";
+            this.linkEsqSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkEsqSenha_LinkClicked);
             // 
             // frmLogin
             // 
