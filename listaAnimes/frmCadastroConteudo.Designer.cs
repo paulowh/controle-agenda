@@ -38,9 +38,9 @@
             this.lblQuantEp = new System.Windows.Forms.Label();
             this.lblNota = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtGenero = new System.Windows.Forms.TextBox();
+            this.txtClassificacao = new System.Windows.Forms.TextBox();
+            this.txtquantidadeEp = new System.Windows.Forms.TextBox();
             this.cbxCategoria = new System.Windows.Forms.ComboBox();
             this.cbxNota = new System.Windows.Forms.ComboBox();
             this.cbxStatus = new System.Windows.Forms.ComboBox();
@@ -123,26 +123,26 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "&Status:";
             // 
-            // textBox2
+            // txtGenero
             // 
-            this.textBox2.Location = new System.Drawing.Point(72, 48);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(115, 20);
-            this.textBox2.TabIndex = 9;
+            this.txtGenero.Location = new System.Drawing.Point(72, 48);
+            this.txtGenero.Name = "txtGenero";
+            this.txtGenero.Size = new System.Drawing.Size(115, 20);
+            this.txtGenero.TabIndex = 9;
             // 
-            // textBox3
+            // txtClassificacao
             // 
-            this.textBox3.Location = new System.Drawing.Point(270, 47);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 10;
+            this.txtClassificacao.Location = new System.Drawing.Point(270, 47);
+            this.txtClassificacao.Name = "txtClassificacao";
+            this.txtClassificacao.Size = new System.Drawing.Size(100, 20);
+            this.txtClassificacao.TabIndex = 10;
             // 
-            // textBox4
+            // txtquantidadeEp
             // 
-            this.textBox4.Location = new System.Drawing.Point(72, 73);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(70, 20);
-            this.textBox4.TabIndex = 11;
+            this.txtquantidadeEp.Location = new System.Drawing.Point(72, 73);
+            this.txtquantidadeEp.Name = "txtquantidadeEp";
+            this.txtquantidadeEp.Size = new System.Drawing.Size(70, 20);
+            this.txtquantidadeEp.TabIndex = 11;
             // 
             // cbxCategoria
             // 
@@ -198,6 +198,7 @@
             this.btnAdicionar.TabIndex = 17;
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // btnSair
             // 
@@ -207,6 +208,7 @@
             this.btnSair.TabIndex = 18;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // frmCadastroConteudo
             // 
@@ -218,9 +220,9 @@
             this.Controls.Add(this.cbxStatus);
             this.Controls.Add(this.cbxNota);
             this.Controls.Add(this.cbxCategoria);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtquantidadeEp);
+            this.Controls.Add(this.txtClassificacao);
+            this.Controls.Add(this.txtGenero);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblNota);
             this.Controls.Add(this.lblQuantEp);
@@ -251,9 +253,9 @@
         private System.Windows.Forms.Label lblQuantEp;
         private System.Windows.Forms.Label lblNota;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtGenero;
+        private System.Windows.Forms.TextBox txtClassificacao;
+        private System.Windows.Forms.TextBox txtquantidadeEp;
         private System.Windows.Forms.ComboBox cbxCategoria;
         private System.Windows.Forms.ComboBox cbxNota;
         private System.Windows.Forms.ComboBox cbxStatus;
