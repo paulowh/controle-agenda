@@ -36,13 +36,11 @@
             this.lblGenero = new System.Windows.Forms.Label();
             this.lblClassificação = new System.Windows.Forms.Label();
             this.lblQuantEp = new System.Windows.Forms.Label();
-            this.lblNota = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtGenero = new System.Windows.Forms.TextBox();
             this.txtClassificacao = new System.Windows.Forms.TextBox();
             this.txtquantidadeEp = new System.Windows.Forms.TextBox();
             this.cbxCategoria = new System.Windows.Forms.ComboBox();
-            this.cbxNota = new System.Windows.Forms.ComboBox();
             this.cbxStatus = new System.Windows.Forms.ComboBox();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
@@ -105,15 +103,6 @@
             this.lblQuantEp.TabIndex = 6;
             this.lblQuantEp.Text = "&Quant. Ep:";
             // 
-            // lblNota
-            // 
-            this.lblNota.AutoSize = true;
-            this.lblNota.Location = new System.Drawing.Point(229, 80);
-            this.lblNota.Name = "lblNota";
-            this.lblNota.Size = new System.Drawing.Size(33, 13);
-            this.lblNota.TabIndex = 7;
-            this.lblNota.Text = "&Nota:";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -157,26 +146,6 @@
             this.cbxCategoria.Size = new System.Drawing.Size(121, 21);
             this.cbxCategoria.TabIndex = 14;
             // 
-            // cbxNota
-            // 
-            this.cbxNota.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxNota.FormattingEnabled = true;
-            this.cbxNota.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.cbxNota.Location = new System.Drawing.Point(270, 76);
-            this.cbxNota.Name = "cbxNota";
-            this.cbxNota.Size = new System.Drawing.Size(100, 21);
-            this.cbxNota.TabIndex = 15;
-            // 
             // cbxStatus
             // 
             this.cbxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -214,17 +183,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 210);
+            this.ClientSize = new System.Drawing.Size(384, 198);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.cbxStatus);
-            this.Controls.Add(this.cbxNota);
             this.Controls.Add(this.cbxCategoria);
             this.Controls.Add(this.txtquantidadeEp);
             this.Controls.Add(this.txtClassificacao);
             this.Controls.Add(this.txtGenero);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.lblNota);
             this.Controls.Add(this.lblQuantEp);
             this.Controls.Add(this.lblClassificação);
             this.Controls.Add(this.lblGenero);
@@ -251,13 +218,11 @@
         private System.Windows.Forms.Label lblGenero;
         private System.Windows.Forms.Label lblClassificação;
         private System.Windows.Forms.Label lblQuantEp;
-        private System.Windows.Forms.Label lblNota;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtGenero;
         private System.Windows.Forms.TextBox txtClassificacao;
         private System.Windows.Forms.TextBox txtquantidadeEp;
         private System.Windows.Forms.ComboBox cbxCategoria;
-        private System.Windows.Forms.ComboBox cbxNota;
         private System.Windows.Forms.ComboBox cbxStatus;
         private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.Button btnSair;

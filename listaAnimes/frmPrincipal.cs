@@ -6,8 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace listaAnimes
 {
@@ -20,40 +20,26 @@ namespace listaAnimes
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            frmCadastroConteudo fCContudo = new frmCadastroConteudo();
+            fCContudo.ShowDialog();
         }
 
         private void dataGridConteudo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string Opcao = "";
-            if (rbnAnime.Checked == true)
-            {
-                Opcao = "Anime";
-            }
-            else if (rbnFilmes.Checked == true)
-            {
-                Opcao = "Filmes";
-            }
-            else if (rbnSeries.Checked == true)
-            {
-                Opcao = "Series";
-            }
-            else if (rbnGeral.Checked == true)
-            {
-                Opcao = "%%";
-            }
-            
-            String endereco = "server=AME0556336W10-1\\SQLEXPRESS;database=Projeto_Animes;UID=sa;password=123456";
-            SqlDataAdapter da = new SqlDataAdapter("SELECT NOME, CLASSIFICACAO, ANO, GENERO, FROM CONTEUDO WHERE CLASSIFICACAO LIKE '%" + Opcao + "%'", endereco);
-            DataSet ds = new DataSet();
-            da.Fill(ds, "CONTEUDO");
-            dataGridConteudo.DataSource = ds.Tables["CONTEUDO"].DefaultView;
 
         }
 
         private void rbnGeral_CheckedChanged(object sender, EventArgs e)
         {
+            var endereco = "server=remotemysql.com;port=3306;database=0erhhgCzuD;UID=0erhhgCzuD;password=UGVKvEHVqs";
+            var conexao = new MySqlConnection(endereco);
 
+            string pesquisa = "";
+
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT nome, genero, classificacao, quantidadeEp, categoria, status FROM ConteudoGeral WHERE categoria LIKE '%" + pesquisa + "%'", endereco);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "ConteudoGeral");
+            dataGridConteudo.DataSource = ds.Tables["ConteudoGeral"].DefaultView;
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
@@ -70,6 +56,56 @@ namespace listaAnimes
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
 
+
+            var endereco = "server=remotemysql.com;port=3306;database=0erhhgCzuD;UID=0erhhgCzuD;password=UGVKvEHVqs";
+            var conexao = new MySqlConnection(endereco);
+
+            string pesquisa = txtPesquisar.Text;
+
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT nome, genero, classificacao, quantidadeEp, categoria, status FROM ConteudoGeral WHERE nome LIKE '%"+ pesquisa + "%'", endereco);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "ConteudoGeral");
+            dataGridConteudo.DataSource = ds.Tables["ConteudoGeral"].DefaultView;
+        }
+
+        private void rbnAnime_CheckedChanged(object sender, EventArgs e)
+        {
+            var endereco = "server=remotemysql.com;port=3306;database=0erhhgCzuD;UID=0erhhgCzuD;password=UGVKvEHVqs";
+            var conexao = new MySqlConnection(endereco);
+
+            string pesquisa = "Anime";
+
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT nome, genero, classificacao, quantidadeEp, categoria, status FROM ConteudoGeral WHERE categoria LIKE '%" + pesquisa + "%'", endereco);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "ConteudoGeral");
+            dataGridConteudo.DataSource = ds.Tables["ConteudoGeral"].DefaultView;
+        }
+
+        private void rbnFilmes_CheckedChanged(object sender, EventArgs e)
+        {
+            var endereco = "server=remotemysql.com;port=3306;database=0erhhgCzuD;UID=0erhhgCzuD;password=UGVKvEHVqs";
+            var conexao = new MySqlConnection(endereco);
+
+            string pesquisa = "Filme";
+
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT nome, genero, classificacao, quantidadeEp, categoria, status FROM ConteudoGeral WHERE categoria LIKE '%" + pesquisa + "%'", endereco);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "ConteudoGeral");
+            dataGridConteudo.DataSource = ds.Tables["ConteudoGeral"].DefaultView;
+        }
+
+        private void rbnSeries_CheckedChanged(object sender, EventArgs e)
+        {
+            var endereco = "server=remotemysql.com;port=3306;database=0erhhgCzuD;UID=0erhhgCzuD;password=UGVKvEHVqs";
+            var conexao = new MySqlConnection(endereco);
+
+            string pesquisa = "Serie";
+
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT nome, genero, classificacao, quantidadeEp, categoria, status FROM ConteudoGeral WHERE categoria LIKE '%" + pesquisa + "%'", endereco);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "ConteudoGeral");
+            dataGridConteudo.DataSource = ds.Tables["ConteudoGeral"].DefaultView;
         }
     }
 }
+
