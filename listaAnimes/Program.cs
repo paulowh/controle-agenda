@@ -16,7 +16,7 @@ namespace listaAnimes
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCadastro());
+            Application.Run(new frmEsqueciSenha());
         }
     }
 }

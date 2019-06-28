@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmEsqueciSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEsqueciSenha.Designer.cs">
+      <DependentUpon>frmEsqueciSenha.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmEsqueciSenha.resx">
+      <DependentUpon>frmEsqueciSenha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCadastro.resx">
       <DependentUpon>frmCadastro.cs</DependentUpon>
     </EmbeddedResource>
