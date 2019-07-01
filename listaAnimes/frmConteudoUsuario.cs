@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace listaAnimes
 {
-    public partial class TelaUsuario : Form
+    public partial class frmConteudoUsuario : Form
     {
-        public TelaUsuario()
+        public frmConteudoUsuario()
         {
             InitializeComponent();
         }
