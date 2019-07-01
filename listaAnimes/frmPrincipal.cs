@@ -106,6 +106,13 @@ namespace listaAnimes
             da.Fill(ds, "ConteudoGeral");
             dataGridConteudo.DataSource = ds.Tables["ConteudoGeral"].DefaultView;
         }
+
+        private void btnAdcionarMinhaLista_Click(object sender, EventArgs e)
+        {
+
+            Form1 fform = new Form1("guto");
+            fform.Show();
+        }
     }
 }
 

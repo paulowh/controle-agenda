@@ -53,6 +53,9 @@ namespace listaAnimes
             if (linhaAfetadas > 0)
             {
                 MessageBox.Show("Usuário cadastrado com sucesso!");
+                this.Close();
+                
+
             }
             else
             {
