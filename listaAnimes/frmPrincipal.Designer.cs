@@ -40,19 +40,21 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnAdiconar = new System.Windows.Forms.Button();
             this.btnAdcionarMinhaLista = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.grbOpcao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridConteudo)).BeginInit();
             this.SuspendLayout();
             // 
             // grbOpcao
             // 
+            this.grbOpcao.Controls.Add(this.radioButton1);
             this.grbOpcao.Controls.Add(this.rbnGeral);
             this.grbOpcao.Controls.Add(this.rbnSeries);
             this.grbOpcao.Controls.Add(this.rbnFilmes);
             this.grbOpcao.Controls.Add(this.rbnAnime);
             this.grbOpcao.Location = new System.Drawing.Point(16, 22);
             this.grbOpcao.Name = "grbOpcao";
-            this.grbOpcao.Size = new System.Drawing.Size(116, 131);
+            this.grbOpcao.Size = new System.Drawing.Size(116, 156);
             this.grbOpcao.TabIndex = 0;
             this.grbOpcao.TabStop = false;
             this.grbOpcao.Text = "Opções";
@@ -130,6 +132,7 @@
             this.dataGridConteudo.Size = new System.Drawing.Size(439, 264);
             this.dataGridConteudo.TabIndex = 3;
             this.dataGridConteudo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridConteudo_CellContentClick);
+            this.dataGridConteudo.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridConteudo_CellMouseDoubleClick);
             // 
             // btnPesquisar
             // 
@@ -143,7 +146,7 @@
             // 
             // btnAdiconar
             // 
-            this.btnAdiconar.Location = new System.Drawing.Point(16, 171);
+            this.btnAdiconar.Location = new System.Drawing.Point(16, 238);
             this.btnAdiconar.Name = "btnAdiconar";
             this.btnAdiconar.Size = new System.Drawing.Size(75, 41);
             this.btnAdiconar.TabIndex = 5;
@@ -162,6 +165,17 @@
             this.btnAdcionarMinhaLista.UseCompatibleTextRendering = true;
             this.btnAdcionarMinhaLista.UseVisualStyleBackColor = true;
             this.btnAdcionarMinhaLista.Click += new System.EventHandler(this.btnAdcionarMinhaLista_Click);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(11, 124);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(91, 17);
+            this.radioButton1.TabIndex = 4;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Minhas Series";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // frmPrincipal
             // 
@@ -203,5 +217,6 @@
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnAdiconar;
         private System.Windows.Forms.Button btnAdcionarMinhaLista;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
