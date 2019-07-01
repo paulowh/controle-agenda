@@ -39,7 +39,7 @@
             this.dataGridConteudo = new System.Windows.Forms.DataGridView();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnAdiconar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAdcionarMinhaLista = new System.Windows.Forms.Button();
             this.grbOpcao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridConteudo)).BeginInit();
             this.SuspendLayout();
@@ -152,22 +152,23 @@
             this.btnAdiconar.UseVisualStyleBackColor = true;
             this.btnAdiconar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnAdcionarMinhaLista
             // 
-            this.button1.Location = new System.Drawing.Point(16, 297);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 41);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Adcicionar a minha lista";
-            this.button1.UseCompatibleTextRendering = true;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdcionarMinhaLista.Location = new System.Drawing.Point(16, 297);
+            this.btnAdcionarMinhaLista.Name = "btnAdcionarMinhaLista";
+            this.btnAdcionarMinhaLista.Size = new System.Drawing.Size(75, 41);
+            this.btnAdcionarMinhaLista.TabIndex = 6;
+            this.btnAdcionarMinhaLista.Text = "Adcicionar a minha lista";
+            this.btnAdcionarMinhaLista.UseCompatibleTextRendering = true;
+            this.btnAdcionarMinhaLista.UseVisualStyleBackColor = true;
+            this.btnAdcionarMinhaLista.Click += new System.EventHandler(this.btnAdcionarMinhaLista_Click);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 366);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAdcionarMinhaLista);
             this.Controls.Add(this.btnAdiconar);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.dataGridConteudo);
@@ -201,6 +202,6 @@
         private System.Windows.Forms.DataGridView dataGridConteudo;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnAdiconar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdcionarMinhaLista;
     }
 }
