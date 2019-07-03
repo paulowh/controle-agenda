@@ -37,10 +37,19 @@ namespace listaAnimes
             MySqlDataReader consulta = comando.ExecuteReader(CommandBehavior.CloseConnection);
             if (consulta.Read() == true)
             {
+                int usuario = consulta.GetInt32(0);
+                MessageBox.Show(usuario.ToString());
+
+                frmPrincipal frmPrincipal = new frmPrincipal();
+
+
+                frmPrincipal.codigoUsuario = 10;
+
                 //Se resultado for verdadeiro a conexão sera permitida
                 conexao.Close();
                 this.Close();
                 
+
             }
             else if (consulta.Read() == false)
             {
@@ -48,7 +57,8 @@ namespace listaAnimes
                 MessageBox.Show("Usuário ou Senha Invalidos");
                 conexao.Close();
 
-            } else
+            }
+            else
             {
                 MessageBox.Show("Erro no sistema");
                 conexao.Close();
