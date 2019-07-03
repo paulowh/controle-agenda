@@ -62,9 +62,10 @@ namespace listaAnimes
         {
             var endereco = "server=remotemysql.com;port=3306;database=0erhhgCzuD;UID=0erhhgCzuD;password=UGVKvEHVqs";
             var conexao = new MySqlConnection(endereco);
-            string pesquisa = txtPesquisar.Text;
+            string pesquisa = "";
+            pesquisa = txtPesquisar.Text;
 
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT  nome, genero, classificacao, quantidadeEp, categoria, status,  FROM ConteudoGeral WHERE nome LIKE '%" + pesquisa + "%'", endereco);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT  codigo, nome, genero, classificacao, quantidadeEp, categoria, status  FROM ConteudoGeral WHERE nome LIKE '%" + pesquisa + "%'", endereco);
             DataSet ds = new DataSet();
             da.Fill(ds, "ConteudoGeral");
             dataGridConteudo.DataSource = ds.Tables["ConteudoGeral"].DefaultView;
@@ -92,7 +93,6 @@ namespace listaAnimes
         {
 
             AtualizarLista(codigo);
-            MessageBox.Show(codigo);
 
         }
 
