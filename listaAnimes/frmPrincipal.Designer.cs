@@ -52,7 +52,7 @@
             this.grbOpcao.Controls.Add(this.rbnSeries);
             this.grbOpcao.Controls.Add(this.rbnFilmes);
             this.grbOpcao.Controls.Add(this.rbnAnime);
-            this.grbOpcao.Location = new System.Drawing.Point(16, 22);
+            this.grbOpcao.Location = new System.Drawing.Point(16, 74);
             this.grbOpcao.Name = "grbOpcao";
             this.grbOpcao.Size = new System.Drawing.Size(116, 156);
             this.grbOpcao.TabIndex = 0;
@@ -132,7 +132,7 @@
             // 
             this.txtPesquisar.Location = new System.Drawing.Point(157, 35);
             this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(439, 20);
+            this.txtPesquisar.Size = new System.Drawing.Size(590, 20);
             this.txtPesquisar.TabIndex = 2;
             // 
             // dataGridConteudo
@@ -142,7 +142,7 @@
             this.dataGridConteudo.Location = new System.Drawing.Point(157, 74);
             this.dataGridConteudo.MultiSelect = false;
             this.dataGridConteudo.Name = "dataGridConteudo";
-            this.dataGridConteudo.Size = new System.Drawing.Size(538, 264);
+            this.dataGridConteudo.Size = new System.Drawing.Size(718, 411);
             this.dataGridConteudo.TabIndex = 3;
             this.dataGridConteudo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridConteudo_CellContentClick);
             this.dataGridConteudo.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridConteudo_CellMouseClick);
@@ -150,7 +150,7 @@
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(620, 35);
+            this.btnPesquisar.Location = new System.Drawing.Point(800, 32);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
             this.btnPesquisar.TabIndex = 4;
@@ -160,9 +160,9 @@
             // 
             // btnAdiconar
             // 
-            this.btnAdiconar.Location = new System.Drawing.Point(16, 250);
+            this.btnAdiconar.Location = new System.Drawing.Point(12, 397);
             this.btnAdiconar.Name = "btnAdiconar";
-            this.btnAdiconar.Size = new System.Drawing.Size(75, 41);
+            this.btnAdiconar.Size = new System.Drawing.Size(116, 41);
             this.btnAdiconar.TabIndex = 5;
             this.btnAdiconar.Text = "Adicionar Conteudo";
             this.btnAdiconar.UseCompatibleTextRendering = true;
@@ -171,11 +171,11 @@
             // 
             // btnAdcionarMinhaLista
             // 
-            this.btnAdcionarMinhaLista.Location = new System.Drawing.Point(16, 297);
+            this.btnAdcionarMinhaLista.Location = new System.Drawing.Point(12, 444);
             this.btnAdcionarMinhaLista.Name = "btnAdcionarMinhaLista";
-            this.btnAdcionarMinhaLista.Size = new System.Drawing.Size(75, 41);
+            this.btnAdcionarMinhaLista.Size = new System.Drawing.Size(116, 41);
             this.btnAdcionarMinhaLista.TabIndex = 6;
-            this.btnAdcionarMinhaLista.Text = "Adcicionar a minha lista";
+            this.btnAdcionarMinhaLista.Text = "Adcicionar Favoritos";
             this.btnAdcionarMinhaLista.UseCompatibleTextRendering = true;
             this.btnAdcionarMinhaLista.UseVisualStyleBackColor = true;
             this.btnAdcionarMinhaLista.Click += new System.EventHandler(this.btnAdcionarMinhaLista_Click);
@@ -184,7 +184,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 366);
+            this.ClientSize = new System.Drawing.Size(899, 504);
             this.Controls.Add(this.btnAdcionarMinhaLista);
             this.Controls.Add(this.btnAdiconar);
             this.Controls.Add(this.btnPesquisar);
