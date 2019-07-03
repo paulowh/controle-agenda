@@ -37,13 +37,12 @@ namespace listaAnimes
             MySqlDataReader consulta = comando.ExecuteReader(CommandBehavior.CloseConnection);
             if (consulta.Read() == true)
             {
-                int usuario = consulta.GetInt32(0);
-                MessageBox.Show(usuario.ToString());
+                //int usuario = consulta.GetInt32(0);
+                //MessageBox.Show(usuario.ToString());
 
                 frmPrincipal frmPrincipal = new frmPrincipal();
 
-
-                frmPrincipal.codigoUsuario = 10;
+                //frmPrincipal.codigoUsuario = 10;
 
                 //Se resultado for verdadeiro a conexão sera permitida
                 conexao.Close();
@@ -81,6 +80,16 @@ namespace listaAnimes
         {
             frmEsqueciSenha fEsqSenha = new frmEsqueciSenha();
             fEsqSenha.ShowDialog();
+        }
+
+        private void frmLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

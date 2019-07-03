@@ -51,7 +51,7 @@ namespace listaAnimes
 
             fLogin.ShowDialog();
 
-            MessageBox.Show(codigoUsuario.ToString() + " -------------  ");
+            //MessageBox.Show(codigoUsuario.ToString() + " -------------  ");
 
             string pesquisa = "";
             CarregarLista(pesquisa);

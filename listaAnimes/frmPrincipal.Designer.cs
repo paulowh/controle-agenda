@@ -140,6 +140,7 @@
             this.dataGridConteudo.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dataGridConteudo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridConteudo.Location = new System.Drawing.Point(157, 74);
+            this.dataGridConteudo.MultiSelect = false;
             this.dataGridConteudo.Name = "dataGridConteudo";
             this.dataGridConteudo.Size = new System.Drawing.Size(538, 264);
             this.dataGridConteudo.TabIndex = 3;
@@ -215,10 +216,10 @@
         private System.Windows.Forms.RadioButton rbnAnime;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPesquisar;
-        private System.Windows.Forms.DataGridView dataGridConteudo;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnAdiconar;
         private System.Windows.Forms.Button btnAdcionarMinhaLista;
         private System.Windows.Forms.RadioButton rdbFavorito;
+        protected System.Windows.Forms.DataGridView dataGridConteudo;
     }
 }
