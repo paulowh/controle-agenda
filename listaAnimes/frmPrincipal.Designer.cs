@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.grbOpcao = new System.Windows.Forms.GroupBox();
+            this.rdbFavorito = new System.Windows.Forms.RadioButton();
             this.rbnGeral = new System.Windows.Forms.RadioButton();
             this.rbnSeries = new System.Windows.Forms.RadioButton();
             this.rbnFilmes = new System.Windows.Forms.RadioButton();
@@ -40,14 +41,13 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnAdiconar = new System.Windows.Forms.Button();
             this.btnAdcionarMinhaLista = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.grbOpcao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridConteudo)).BeginInit();
             this.SuspendLayout();
             // 
             // grbOpcao
             // 
-            this.grbOpcao.Controls.Add(this.radioButton1);
+            this.grbOpcao.Controls.Add(this.rdbFavorito);
             this.grbOpcao.Controls.Add(this.rbnGeral);
             this.grbOpcao.Controls.Add(this.rbnSeries);
             this.grbOpcao.Controls.Add(this.rbnFilmes);
@@ -58,6 +58,18 @@
             this.grbOpcao.TabIndex = 0;
             this.grbOpcao.TabStop = false;
             this.grbOpcao.Text = "Opções";
+            // 
+            // rdbFavorito
+            // 
+            this.rdbFavorito.AutoSize = true;
+            this.rdbFavorito.Location = new System.Drawing.Point(11, 124);
+            this.rdbFavorito.Name = "rdbFavorito";
+            this.rdbFavorito.Size = new System.Drawing.Size(68, 17);
+            this.rdbFavorito.TabIndex = 4;
+            this.rdbFavorito.TabStop = true;
+            this.rdbFavorito.Text = "Favoritos";
+            this.rdbFavorito.UseVisualStyleBackColor = true;
+            this.rdbFavorito.CheckedChanged += new System.EventHandler(this.rdbFavorito_CheckedChanged);
             // 
             // rbnGeral
             // 
@@ -129,9 +141,10 @@
             this.dataGridConteudo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridConteudo.Location = new System.Drawing.Point(157, 74);
             this.dataGridConteudo.Name = "dataGridConteudo";
-            this.dataGridConteudo.Size = new System.Drawing.Size(439, 264);
+            this.dataGridConteudo.Size = new System.Drawing.Size(538, 264);
             this.dataGridConteudo.TabIndex = 3;
             this.dataGridConteudo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridConteudo_CellContentClick);
+            this.dataGridConteudo.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridConteudo_CellMouseClick);
             this.dataGridConteudo.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridConteudo_CellMouseDoubleClick);
             // 
             // btnPesquisar
@@ -146,7 +159,7 @@
             // 
             // btnAdiconar
             // 
-            this.btnAdiconar.Location = new System.Drawing.Point(16, 238);
+            this.btnAdiconar.Location = new System.Drawing.Point(16, 250);
             this.btnAdiconar.Name = "btnAdiconar";
             this.btnAdiconar.Size = new System.Drawing.Size(75, 41);
             this.btnAdiconar.TabIndex = 5;
@@ -165,17 +178,6 @@
             this.btnAdcionarMinhaLista.UseCompatibleTextRendering = true;
             this.btnAdcionarMinhaLista.UseVisualStyleBackColor = true;
             this.btnAdcionarMinhaLista.Click += new System.EventHandler(this.btnAdcionarMinhaLista_Click);
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(11, 124);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(91, 17);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Minhas Series";
-            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // frmPrincipal
             // 
@@ -217,6 +219,6 @@
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnAdiconar;
         private System.Windows.Forms.Button btnAdcionarMinhaLista;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rdbFavorito;
     }
 }
