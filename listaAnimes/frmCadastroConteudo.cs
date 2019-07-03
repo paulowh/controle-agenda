@@ -28,7 +28,7 @@ namespace listaAnimes
 
             comando.Connection = conexao;
             comando.CommandType = CommandType.Text;
-            comando.CommandText = "INSERT INTO ConteudoGeral(favorito, nome, genero, classificacao, quantidadeEp, categoria, status) VALUES( '', @nome, @genero, @classificacao, @quantidadeEp, @categoria, @status)";
+            comando.CommandText = "INSERT INTO ConteudoGeral(favorito, nome, genero, classificacao, quantidadeEp, categoria, status) VALUES('', @nome, @genero, @classificacao, @quantidadeEp, @categoria, @status)";
             //INSERT INTO ConteudoGeral(nome, genero, classificacao, quantidadeEp, categoria, status) VALUES( 'Teste', 'Terror', '+18', '150', 'Serie', 'Em andamento')
             comando.Parameters.AddWithValue("@nome", txtNome.Text);
             comando.Parameters.AddWithValue("@genero", txtGenero.Text);
@@ -39,19 +39,26 @@ namespace listaAnimes
 
 
             conexao.Open();
-
-            int linhaAfetadas = comando.ExecuteNonQuery();
-            if (linhaAfetadas > 0)
+            //if (txtNome.Text == "" || txtGenero.Text == "" || txtClassificacao.Text == "" || txtquantidadeEp.Text == "" || cbxCategoria.Text == "" || )
+            try
             {
-                MessageBox.Show("Conteudo cadastrado com sucesso!");
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Ocorreu algum problema no cadastro.");
-            }
+                int linhaAfetadas = comando.ExecuteNonQuery();
+                if (linhaAfetadas > 0)
+                {
+                    MessageBox.Show("Conteudo cadastrado com sucesso!");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu algum problema no cadastro.");
+                }
 
-            conexao.Close();
+                conexao.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Ocorreu um erro! \nPor favor preencher todos os campos", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnSair_Click(object sender, EventArgs e)

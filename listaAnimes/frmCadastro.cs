@@ -47,21 +47,27 @@ namespace listaAnimes
                 comando.Parameters.AddWithValue("@sexo", "");
             }
 
-
-            conexao.Open();
-            int linhaAfetadas = comando.ExecuteNonQuery();
-            if (linhaAfetadas > 0)
+            try
             {
-                MessageBox.Show("Usuário cadastrado com sucesso!");
-                this.Close();
-                
+                conexao.Open();
+                int linhaAfetadas = comando.ExecuteNonQuery();
+                if (linhaAfetadas > 0)
+                {
+                    MessageBox.Show("Usuário cadastrado com sucesso!");
+                    this.Close();
 
+
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu algum problema no cadastro.");
+                }
+                conexao.Close();
             }
-            else
+            catch
             {
-                MessageBox.Show("Ocorreu algum problema no cadastro.");
+                MessageBox.Show("Ocorreu um erro! \nPor favor preencher todos os campos", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            conexao.Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

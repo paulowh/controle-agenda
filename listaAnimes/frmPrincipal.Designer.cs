@@ -138,6 +138,7 @@
             // dataGridConteudo
             // 
             this.dataGridConteudo.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.dataGridConteudo.CausesValidation = false;
             this.dataGridConteudo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridConteudo.Location = new System.Drawing.Point(157, 74);
             this.dataGridConteudo.MultiSelect = false;
